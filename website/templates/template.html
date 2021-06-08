@@ -18,8 +18,17 @@
 
     <!-- Style -->
     <style>
-        #head{
+        #head {
             font-family: 'Calistoga', cursive;
+        }
+
+        body {
+            background-color: rgb(255, 255, 126);
+        }
+
+        #main-body {
+            padding-left: 5%;
+            padding-top: 2%;
         }
     </style>
     <!-- Title of the Page  -->
@@ -30,7 +39,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container">
             <img class="navbar-brand" src="https://studentambassadors.microsoft.com/Assets/Badge/LevelAlpha.png"
                 alt="MSLA" width="100px">
@@ -40,18 +49,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbar">
-                <ol class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse justify-content-end ml-auto mr-1" id="navbar">
+                <ol class="navbar-nav text-right">
                     <li class="nav-item">
-                        <a class="btn btn-outline-light btn-lg me-2" href="/">Home</a>
+                        <h1><a class="btn btn-outline-primary btn-lg me-2" href="/">Home</a></h1>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-danger btn-lg me-2" href="/register">Register</a>
-
+                        <h1><a class="btn btn-outline-danger btn-lg me-2" href="/register">Register</a></h1>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-warning btn-lg me-2" href="/connect">Connect</a>
-
+                        <h1><a class="btn btn-outline-warning btn-lg me-2" href="/connect">Connect</a></h1>
                     </li>
                 </ol>
             </div>
@@ -61,7 +68,7 @@
 
     {% block alert %} {% endblock %}
 
-    <div class="container">
+    <div class="container-fluid" id="main-body">
         <h1 class="page-header" id="head">Web Development With Python</h1>
         <h1>{% block title %}{% endblock %}</h1>
     </div>
