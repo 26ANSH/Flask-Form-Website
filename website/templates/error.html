@@ -1,5 +1,9 @@
-{% extends "template.html" %}
-{% block title %}This Page Does not Exist{% endblock %}
-{% block alert %} 
-<img class="navbar-brand" src="https://studentambassadors.microsoft.com/Assets/Badge/LevelAlpha.png" alt="MSLA" width="10px">
-  {% endblock %}
+{% extends templatevalue %}
+{% block alert %}
+  <div class="alert alert-danger alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+{% endblock %}

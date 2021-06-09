@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for
 from .models import user
 from . import db
 auth = Blueprint('auth', __name__)
@@ -14,13 +14,11 @@ def register():
         # print(fname, lname, emailid, country)
 
         if lname == '' or country == '' or fname == '' or emailid == '':
-            flash('Please Fill all Requirements', category="invalid-form")
-            return render_template('register.html')
+            return render_template('error.html', templatevalue="register.html", message="Please Fill all Elements")
         else:
             check_user = user.query.filter_by(Uemail=emailid).first()
             if check_user:
-                flash('You Have already Registered for This Event', category="invalid-form")
-                return render_template('sucess.html')
+                return render_template('error.html', templatevalue="sucess.html", message="You Have Already Registered for this Event!!!")
             else:
                 new_user = user(Uemail=emailid, Fname=fname, Lname=lname, Ucountry=country)
                 db.session.add(new_user)
