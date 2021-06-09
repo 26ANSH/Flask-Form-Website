@@ -9,28 +9,35 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous" />
+
+    <!-- JS Scripts For Bootstrap to run properly -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
 
     <!-- Style -->
-    <style>
-        #head {
-            font-family: 'Calistoga', cursive;
-        }
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
-        body {
-            background-color: rgb(255, 255, 126);
-        }
-
-        #main-body {
-            padding-left: 5%;
-            padding-top: 2%;
-        }
-    </style>
+    <!-- Inline style -->
+    {% block style %}{% endblock %}
     <!-- Title of the Page  -->
     <title>Web Dev with Python</title>
 </head>
@@ -39,7 +46,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark" id="nav">
         <div class="container">
             <img class="navbar-brand" src="https://studentambassadors.microsoft.com/Assets/Badge/LevelAlpha.png"
                 alt="MSLA" width="100px">
@@ -52,13 +59,13 @@
             <div class="collapse navbar-collapse justify-content-end ml-auto mr-1" id="navbar">
                 <ol class="navbar-nav text-right">
                     <li class="nav-item">
-                        <h1><a class="btn btn-outline-primary btn-lg me-2" href="/">Home</a></h1>
+                        <h1><a class="btn btn-lg me-2" id="home" href="/">Home</a></h1>
                     </li>
                     <li class="nav-item">
-                        <h1><a class="btn btn-outline-danger btn-lg me-2" href="/register">Register</a></h1>
+                        <h1><a class="btn btn-lg me-2" id="register" href="/register">Register</a></h1>
                     </li>
                     <li class="nav-item">
-                        <h1><a class="btn btn-outline-warning btn-lg me-2" href="/connect">Connect</a></h1>
+                        <h1><a class="btn btn-lg me-2" id="contact" href="/connect">Connect</a></h1>
                     </li>
                 </ol>
             </div>
@@ -69,25 +76,10 @@
     {% block alert %} {% endblock %}
 
     <div class="container-fluid" id="main-body">
-        <h1 class="page-header" id="head">Web Development With Python</h1>
-        <h1>{% block title %}{% endblock %}</h1>
+        <h1 id="head">Events by Ansh Vidyabhanu</h1>
+        {% block title %}{% endblock %}
+        {% block content %}{% endblock %}
     </div>
-
-
-
-
-    <!-- JS Scripts For Bootstrap to run properly -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 
 </html>

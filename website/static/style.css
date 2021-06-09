@@ -1,0 +1,35 @@
+#head {
+    font-family: 'Calistoga', cursive;
+}
+
+body {
+    background: linear-gradient(to right, rgb(251, 255, 3), rgb(84, 219, 21))
+}
+#main-body {
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 5%;
+}
+
+#nav {
+    background: linear-gradient(to right,rgb(77, 220, 245), rgb(1, 118, 208));
+}
+
+#home, #register, #contact{
+    color: black;
+    text-align: center;
+    border: 3pt solid rgb(255, 2, 2);
+}
+#home:hover, #register:hover, #contact:hover{
+    color: white;
+    background: red;
+}
+.card-body{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+ul li{
+    list-style-type: "\1F449  ";
+    font-size:15pt
+}

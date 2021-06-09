@@ -13,3 +13,7 @@ def register():
 @views.route('/connect')
 def connect():
     return render_template('connect.html')
+
+@views.errorhandler(404)
+def print_error():
+    return 'hello this is a error'

@@ -1,2 +1,111 @@
-{% extends "template.html" %}{% block title %}Connect Page{% endblock %}
-{% block alert %} <div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>Finally !!!</strong> Lets connect and grow together!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div> {% endblock %}
+{% extends "template.html" %}{% block title %}<h1 class="head">Lets Connect With Each Other</h1>{% endblock %}
+{% block alert %} <div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>Finally !!!</strong>
+    Lets connect and grow together!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button></div> {% endblock %}
+
+
+{% block style %}
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<style>
+    #contact {
+        color: white;
+        text-align: center;
+        border: 3pt solid rgb(255, 2, 2);
+        background-color: red;
+    }
+</style>
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="row justify-content-evenly">
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <h3 class="card-header">Twitter</h3>
+
+            <div class="card-body">
+                <a href="https://twitter.com/Vidyabhanuansh?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                    data-show-count="false">Follow @Vidyabhanuansh</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p class="card-text">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">Use this Python 🐍code to generate a QR code 🧑‍💻 for any link that u want
+                        👇Scan and see for yourself🤩<br><br>import qrcode<br>image =
+                        qrcode.make(&quot;&lt;link&gt;&quot;)<a
+                            href="https://t.co/OMrCaIvSTW">https://t.co/OMrCaIvSTW</a>(&quot;qr.png&quot;,
+                        &quot;PNG&quot;) <a
+                            href="https://twitter.com/hashtag/Python3?src=hash&amp;ref_src=twsrc%5Etfw">#Python3</a> <a
+                            href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> <a
+                            href="https://twitter.com/hashtag/pythonlearning?src=hash&amp;ref_src=twsrc%5Etfw">#pythonlearning</a>
+                        <a href="https://twitter.com/hashtag/Xcode?src=hash&amp;ref_src=twsrc%5Etfw">#Xcode</a> <a
+                            href="https://twitter.com/hashtag/QRCode?src=hash&amp;ref_src=twsrc%5Etfw">#QRCode</a> <a
+                            href="https://twitter.com/hashtag/python%E8%A9%A6%E9%A8%93?src=hash&amp;ref_src=twsrc%5Etfw">#python試験</a>
+                        <a
+                            href="https://twitter.com/hashtag/programming?src=hash&amp;ref_src=twsrc%5Etfw">#programming</a>
+                        <a href="https://twitter.com/hashtag/coding?src=hash&amp;ref_src=twsrc%5Etfw">#coding</a> <a
+                            href="https://twitter.com/hashtag/create?src=hash&amp;ref_src=twsrc%5Etfw">#create</a> <a
+                            href="https://t.co/ITTt5q6uB1">pic.twitter.com/ITTt5q6uB1</a></p>&mdash; Ansh Vidyabhanu
+                    (@Vidyabhanuansh) <a
+                        href="https://twitter.com/Vidyabhanuansh/status/1352827633189474305?ref_src=twsrc%5Etfw">January
+                        23, 2021</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card  ">
+            <h3 class="card-header">LinkedIn</h3>
+            <div class="card-body">
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card's content.
+                </p>
+
+                <a href="https://www.linkedin.com/in/ansh-vidyabhanu-3a6a35166/"
+                target="_blank" class="btn btn-primary fas fa fa-linkedin"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card  ">
+            <h3 class="card-header">Github</h3>
+            <div class="card-body">
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card's content.
+                </p>
+
+
+                <!-- Place this tag where you want the button to render. -->
+                <a class="github-button" href="https://github.com/26ANSH"
+                    data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large"
+                    data-show-count="true" aria-label="Follow @26ANSH on GitHub">Follow @26ANSH</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card  ">
+            <h3 class="card-header">Mail Me</h3>
+            <div class="card-body">
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card's content.
+                </p>
+
+                <a href="mailto:ansh.vidyabhanu@studentambassadors.com" class="btn btn-primary fas fa fa-mail-forward">Mail</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

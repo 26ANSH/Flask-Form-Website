@@ -1,9 +1,44 @@
 {% extends "template.html" %}{% block title %}Home page{% endblock %}
-{% block alert %} 
+{% block alert %}
 <div class="alert alert-primary alert-dismissible fade show" role="alert">
-    <strong>Welcome to Home</strong> Greetings From Ansh Vidyabhanu
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  <strong>Welcome to Home</strong> Greetings From Ansh Vidyabhanu
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="row ">
+  <div class="card">
+    <h1 class="card-header">Web Development With Python</h1>
+    <div class="row card-body">
+      <div class="col-sm-6">
+        <p class="card-text">
+          Bring the data wrangling and processing power of Python to the web
+        <ul>
+          <li>Python Basics</li>
+          <li>Flask Basics</li>
+          <li>Azure App Service</li>
+        </ul>
+        </p>
+        <a href="/register" class="btn btn-primary">Register for the event</a>
+      </div>
+      <img class="col-sm-6 img-fluid" src="{{ url_for('static', filename='images/logo.png')}}" alt="sans" id="logo"/>
+    </div>
+    <h1 class="card-header">June 14, 2021 on Microsoft Teams</h1>
   </div>
-  {% endblock %}
+</div>
+{% endblock %}
+
+{% block style %}
+<style>
+  #home{
+    color: white;
+    text-align: center;
+    border: 3pt solid rgb(255, 2, 2);
+    background-color:red;
+  }
+</style>
+{% endblock %}
