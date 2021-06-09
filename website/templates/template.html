@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 
+<!-- Header - Scripts -->
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -46,6 +48,7 @@
 
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark" id="nav">
         <div class="container">
             <img class="navbar-brand" src="https://studentambassadors.microsoft.com/Assets/Badge/LevelAlpha.png"
@@ -72,14 +75,26 @@
         </div>
     </nav>
 
-
+    <!-- Alerts if any -->
     {% block alert %} {% endblock %}
 
+    <!-- Main - Body -->
     <div class="container-fluid" id="main-body">
         <h1 id="head">Events by Ansh Vidyabhanu</h1>
         {% block title %}{% endblock %}
         {% block content %}{% endblock %}
     </div>
+
+    <br>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" target="_blank" href="http://www.whoisansh.tech">Ansh Vidyabhanu</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
 
 </html>
