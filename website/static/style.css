@@ -40,17 +40,46 @@ footer{
     top: 100%;
 }
 .wp-back{
+    max-width: 30vh;
     background-color: white;
+    border-radius: 2vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
-
-.wp{
-    background-color: rgb(37, 211, 102);
+.wp-back a{
+    padding: 1vh;
     font-size: 5vh;
-    border-radius: 5vh;
+    border-radius: 1vh;
+}
+#tw{
+    background-color: rgb(29, 161, 242);
+    color: white;
+}
+#tw:hover{
+    color: rgb(29, 161, 242);
+    background-color:white;
+}
+#ln{
+    background-color: rgb(0, 119, 181);
+    color: white;
+}
+#ln:hover{
+    color: rgb(0, 119, 181);
+    background-color:white;
+}
+#wp{
+    background-color: rgb(37, 211, 102);
+    color: white;
+}
+#wp:hover{
+    color: rgb(37, 211, 102);
+    background-color:white;
+}
+#fb{
+    background-color:rgb(59, 89, 152);
+    color: white;
+}
+#fb:hover{
+    color: rgb(59, 89, 152);
+    background-color:white;
 }
 
-.fa-whatsapp{
-    
-    color: rgb(0, 78, 33);
-}

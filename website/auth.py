@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from . import conn_url
+from .views import WP_MSG, MSG_URL
 import pyodbc
 auth = Blueprint('auth', __name__)
 cnxn = pyodbc.connect(conn_url)
@@ -21,7 +22,7 @@ def register():
             cursor.execute(f"SELECT * FROM UserData WHERE UserEmail='{emailid}'")
             row_count = cursor.fetchall()
             if len(row_count) != 0:
-                return render_template('error.html', templatevalue="sucess.html", message="You Have Already Registered for this Event!!!")
+                return render_template('error.html', templatevalue="sucess.html", message="You Have Already Registered for this Event!!!", WP_MSG  = WP_MSG, MSG_URL = MSG_URL)
             else:
                 cursor.execute(f"INSERT INTO UserData VALUES ('{emailid}', '{fname}', '{lname}', '{country}');") 
                 cursor.commit()

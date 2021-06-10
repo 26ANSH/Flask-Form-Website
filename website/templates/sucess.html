@@ -13,19 +13,13 @@
 {% block content %}
 <hr>
 <div class="container rounded" style="text-align: center;">
-  <div class="container-sm wp-back">
-    <br>
-    <a href="https://wa.me/?text=*Introduction to Web Development With Python*
-    Sponsored by Microsoft Student Learn Ambassadors
-    Register at: event.whoisansh.tech"
-    target="_blank">
-    <div class="container-sm wp py-2">
-      <i class="fa fa-whatsapp" style='font-size:48px;'></i>
-    </div>
-  </a>
-    <br>
+  <div class="container-sm wp-back py-2">
+    <a href="https://wa.me/?text={{ WP_MSG+' '+MSG_URL }}" target="_blank" id="wp"><i class="fa fa-whatsapp"></i></a>
+    <a href="#" id="ln"><i class="fa fa-linkedin"></i></a>
+    <a href="https://twitter.com/share?url={{MSG_URL}}&text={{WP_MSG}}" target="_blank" id="tw"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.facebook.com/sharer.php?u={{ MSG_URL }}" target="_blank" id="fb"><i class="fa fa-facebook"></i></a>
   </div>
   <br>
-  <img class="img-fluid" src="{{ url_for('static', filename='images/event.jpg')}}" alt="sans" id="logo" />
+  <img class="img-fluid" src="{{ url_for('static', filename='images/event.jpg')}}" alt="sans" id="file" />
 </div>
 {% endblock %}
