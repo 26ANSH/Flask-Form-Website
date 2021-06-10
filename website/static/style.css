@@ -3,7 +3,8 @@
 }
 
 body {
-    background: linear-gradient(to right, rgb(251, 255, 3), rgb(84, 219, 21))
+    background: linear-gradient(to right, rgb(251, 255, 3), rgb(84, 219, 21));
+    min-height: 100vh;
 }
 #main-body {
     padding-left: 5%;
@@ -32,4 +33,9 @@ body {
 ul li{
     list-style-type: "\1F449  ";
     font-size:15pt
+}
+
+footer{
+    position: sticky;
+    top: 100%;
 }

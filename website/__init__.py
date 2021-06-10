@@ -1,30 +1,29 @@
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
-from os import path
 
-db = SQLAlchemy()
-DB_NAME = 'UserData.db'
+#  Connection Parameters
+driver = "{ODBC Driver 17 for SQL Server}"
+server_name = "ansh-db-server"
+database_name = "ansh-db"
+server =  f'{server_name}.database.windows.net,1433'
+username = 'ansh-db-server-admin'
+password = 'mydbpassword@001'
 
+# Connection String
+conn_url = f"Driver={driver};Server=tcp:{server};Database={database_name};Uid={username};Pwd={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+# db = pyodbc()
+
+def page_not_found(e):
+  return render_template('404.html'), 404
 
 def start_app():
     app = Flask(__name__)
     app.config['SECRET_key'] = 'web development with python'
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    db.init_app(app)
 
     from . views import views
     from . auth import auth
 
-    from .models import user
-
-    create_database(app)
-
+    app.secret_key = 'web development with python'
+    app.register_error_handler(404, page_not_found)
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
     return app
-
-
-def create_database(app):
-    if not path.exists('website/' + DB_NAME):
-        db.create_all(app=app)
-        print('Created Database!')

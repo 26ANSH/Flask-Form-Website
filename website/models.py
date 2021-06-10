@@ -1,9 +1,14 @@
-from . import db
-from flask_login import UserMixin
+# from . import db as cnxn
+# import pyodbc
 
-class user(db.Model, UserMixin):
-    Uid = db.Column(db.Integer, primary_key=True)
-    Uemail = db.Column(db.String(100), unique=True)
-    Fname = db.Column(db.String(100))
-    Lname = db.Column(db.String(100))
-    Ucountry = db.Column(db.String(100))
+# def check_user(emailid):
+#     cursor = cnxn.cursor()
+#     cursor.execute(f"SELECT * FROM UserData WHERE UserEmail='{emailid}'")
+#     row_count = cursor.fetchall()
+#     if len(row_count) == 0:
+#         return False
+#     else:
+#          cursor.execute(f"INSERT INTO UserData VALUES ('{email}', '{fname}', '{lname}', '{country}');") 
+#          cursor.commit()
+
+

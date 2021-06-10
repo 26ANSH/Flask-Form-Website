@@ -1,7 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from .models import user
-from . import db
+from . import conn_url
+import pyodbc
 auth = Blueprint('auth', __name__)
+cnxn = pyodbc.connect(conn_url)
+cursor = cnxn.cursor()
 
 
 @auth.route('/register', methods=['GET', 'POST'])
@@ -16,14 +18,13 @@ def register():
         if lname == '' or country == '' or fname == '' or emailid == '':
             return render_template('error.html', templatevalue="register.html", message="Please Fill all Elements")
         else:
-            check_user = user.query.filter_by(Uemail=emailid).first()
-            if check_user:
+            cursor.execute(f"SELECT * FROM UserData WHERE UserEmail='{emailid}'")
+            row_count = cursor.fetchall()
+            if len(row_count) != 0:
                 return render_template('error.html', templatevalue="sucess.html", message="You Have Already Registered for this Event!!!")
             else:
-                new_user = user(Uemail=emailid, Fname=fname, Lname=lname, Ucountry=country)
-                db.session.add(new_user)
-                db.session.commit()
+                cursor.execute(f"INSERT INTO UserData VALUES ('{emailid}', '{fname}', '{lname}', '{country}');") 
+                cursor.commit()
                 return redirect(url_for('views.welcome'))
-
     else:
         return render_template('register.html')
