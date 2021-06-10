@@ -39,3 +39,18 @@ footer{
     position: sticky;
     top: 100%;
 }
+.wp-back{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.wp{
+    background-color: rgb(37, 211, 102);
+    font-size: 5vh;
+    border-radius: 5vh;
+}
+
+.fa-whatsapp{
+    
+    color: rgb(0, 78, 33);
+}
