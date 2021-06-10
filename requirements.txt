@@ -1,5 +1,2 @@
 Flask
-requests
-flask-login
-flask-sqlalchemy
-flask-mail
+pyodbc
