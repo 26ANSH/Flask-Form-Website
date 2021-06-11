@@ -7,12 +7,11 @@ auth = Blueprint('auth', __name__)
 cnxn = pyodbc.connect(conn_url)
 cursor = cnxn.cursor()
 
-def send_ok_mail(rec):
+def send_ok_mail(rec, name):
     msg = Message(subject='Web Development with Python',
                                 sender='ansh.vidyabhanu@studentambassadors.com',
-                                recipients=[rec],)
-    msg.body = render_template('mail.html')
-    msg.html = render_template('mail.html')
+                                recipients=[rec], 
+                                body='Thank you '+name+' for registering')
     msg.msgId = msg.msgId.split('@')[0] + 'studentambassadors.com'
     mail.send(msg)
 
@@ -43,8 +42,9 @@ def register():
                     session["registered"] = 'done'
 
                     # SEnd Mails
-                    send_ok_mail(emailid)
+                    send_ok_mail(emailid, fname)
                 
+
                     # print("session ser",session["registered"])
                     cursor.execute(f"INSERT INTO UserData VALUES ('{emailid}', '{fname}', '{lname}', '{country}');") 
                     cursor.commit()
