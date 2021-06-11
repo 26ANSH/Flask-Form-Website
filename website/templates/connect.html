@@ -3,10 +3,12 @@
 {% block title %}<h1 class="head">Lets Connect With Each Other</h1>{% endblock %}
 
 {% block alert %}
-    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+      <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
         <strong>Happy Connecting!</strong> Feel Free to ping me for any help you need
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 {% endblock %}
 
 
@@ -16,10 +18,7 @@
 
 <style>
     #contact {
-        color: white;
-        text-align: center;
-        border: 3pt solid rgb(255, 2, 2);
-        background-color: red;
+        border-bottom: 1vh solid rgb(255, 2, 2);
     }
 </style>
 {% endblock %}
@@ -31,7 +30,7 @@
 <hr>
 <div class="row justify-content-evenly">
 
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-3 col-md-6 py-2">
         <div class="card">
             <h3 class="card-header">Twitter</h3>
 
@@ -67,13 +66,12 @@
         </div>
     </div>
     
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-3 col-md-6 py-2">
         <div class="card  ">
             <h3 class="card-header">LinkedIn</h3>
             <div class="card-body">
                 <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                    LinkedIn is a Place where we share our Achievements for the community to see and grow together.
                 </p>
 
                 <a href="https://www.linkedin.com/in/ansh-vidyabhanu-3a6a35166/"
@@ -82,13 +80,12 @@
         </div>
     </div>
 
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-3 col-md-6 py-2">
         <div class="card  ">
             <h3 class="card-header">Github</h3>
             <div class="card-body">
                 <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                    Connect with me on Github to know more about my upcoming projects and to see their source codes. <br> We could also Collab on a project and work on it together
                 </p>
 
 
@@ -100,13 +97,12 @@
         </div>
     </div>
 
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-3 col-md-6 py-2">
         <div class="card  ">
             <h3 class="card-header">Mail Me</h3>
             <div class="card-body">
                 <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                     for queries regarding to any event please feel free to mail me
                 </p>
 
                 <a href="mailto:ansh.vidyabhanu@studentambassadors.com" class="btn btn-primary fas fa fa-mail-forward">Mail</a>

@@ -1,4 +1,4 @@
-{% extends "template.html" %}
+{% extends "register.html" %}
 {% block title %}You Have Successfully Registered for the Event{% endblock %}
 
 {% block alert %}
@@ -18,6 +18,7 @@
     <a href="#" id="ln"><i class="fa fa-linkedin"></i></a>
     <a href="https://twitter.com/share?url={{MSG_URL}}&text={{WP_MSG}}" target="_blank" id="tw"><i class="fa fa-twitter"></i></a>
     <a href="https://www.facebook.com/sharer.php?u={{ MSG_URL }}" target="_blank" id="fb"><i class="fa fa-facebook"></i></a>
+    <a href="{{url_for('views.download_file')}}" id="dw"><i class="fa fa-download"></i></a>
   </div>
   <br>
   <img class="img-fluid" src="{{ url_for('static', filename='images/event.jpg')}}" alt="sans" id="file" />

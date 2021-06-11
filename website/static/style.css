@@ -13,17 +13,54 @@ body {
 }
 
 #nav {
-    background: linear-gradient(to right,rgb(77, 220, 245), rgb(1, 118, 208));
+    background: linear-gradient(to right,rgb(0, 217, 255), rgb(17, 0, 255));
 }
 
-#home, #register, #contact{
-    color: black;
+#home, #register, #contact, #about{
+    font-weight: bold;
     text-align: center;
-    border: 3pt solid rgb(255, 2, 2);
+    padding: 2vh;
 }
-#home:hover, #register:hover, #contact:hover{
-    color: white;
-    background: red;
+
+
+#home{
+    color: rgb(204, 255, 0);
+    /* border: 0.5vh solid rgb(204, 255, 0); */
+}
+#home:hover{
+    color: black;
+    background: rgb(204, 255, 0);
+}
+
+#about{
+    color: rgb(0, 255, 0);
+    /* border: 0.5vh solid rgb(204, 255, 0); */
+}
+#about:hover{
+    color: black;
+    background: rgb(0, 255, 0);
+}
+
+#register{
+    color: rgb(0, 255, 255);
+    /* border: 3pt solid rgb(255, 2, 2); */
+}
+#register:hover{
+    color: black;
+    background:rgb(0, 255, 255);
+}
+
+#contact{
+    color: orange;
+    /* border: 3pt solid rgb(255, 2, 2); */
+}
+#contact:hover{
+    color: black;
+    background: orange;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card-body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -40,7 +77,7 @@ footer{
     top: 100%;
 }
 .wp-back{
-    max-width: 30vh;
+    max-width: 38vh;
     background-color: white;
     border-radius: 2vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
@@ -82,4 +119,11 @@ footer{
     color: rgb(59, 89, 152);
     background-color:white;
 }
-
+#dw{
+    background-color:rgb(189, 31, 39);
+    color: white;
+}
+#dw:hover{
+    color: rgb(189, 31, 39);
+    background-color:white;
+}

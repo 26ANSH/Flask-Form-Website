@@ -1,0 +1,159 @@
+{% extends "template.html" %}
+
+{% block title %}Know in detail what will we learn{% endblock %}
+
+{% block style %}
+<style>
+    #about {
+        border-bottom: 1vh solid rgb(255, 2, 2);
+    }
+    .card-header{
+        background-color:black;
+        color: white;
+    }
+    .card{
+        border-top-right-radius: 10vh;
+    }
+    .img-card{
+        border-top-right-radius: 10vh;
+    }
+</style>
+{% endblock %}
+
+
+
+
+{% block content %}
+<hr>
+<div class="row ">
+
+    <div class="col-md-6 py-4">
+        <div class="card">
+            <!-- <h4 class="card-header">Flask</h4> -->
+            <div class="bg-image text-center">
+                <img src="https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png" class="img-fluid img-card" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">So, here’s why you should learn flask ?</h5>
+
+                <p class="card-text border-top">
+                    <ul>
+                        <li>It is Light Weight</li>
+                        Flask is a micro framework. Micro meaning Flask aims to keep the core simple but extensible, there is not much required to get up and running with flask
+                        <li>Extensible and flexible</li>
+                        Extensible ? Yes so flask has what are called extensions they are python modules that add functionality and support to our flask application. Flask implements bare-minimum core functionality and lets you decide how you would like to extend it
+                        <li>Easy to learn</li>
+                        It's very beginner friendly and one can learn flask within few days
+                      </ul>
+                      <h5>In my opinion, flask is probably the best web framework out there and you should consider learning and using it.</h5>
+                      <p class="border-top">
+                          <h5>Fun Fact this WebApp is also a Flask app</h5>
+                      </p>
+                </p>
+                <a href="https://flask.palletsprojects.com/en/2.0.x/" class="btn btn-primary" target="_blank">Know More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-6 py-4">
+        <div class="card  ">
+            <!-- <h4 class="card-header border">Azure</h4> -->
+            <div class="bg-image">
+                <img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/95baa365-fedb-4d3c-8b1f-22735e3bb77a.png" class="img-fluid img-card" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Azure App Service</h5>
+
+                <p class="card-text border-top">
+                    <ul>
+                        <h5>Azure Web Apps is a cloud computing based platform for hosting websites, created and operated by Microsoft.</h5> 
+                        <hr>
+                        <li>Fast development and Deployment</li>
+                        Apps can be hosted anywhere manually or automatically on Microsoft’s global datacenter infrastructure
+                        <li>Versatile framework</li>
+                        The Web App Service provides unique support for ASP.NET, Node.js, Java, PHP and Python. Scripts or executables on App Service can also be run on VMs.
+                        <li>Where it used ?</li>
+                        Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends
+                      </ul>
+
+                      <p class="border-top">
+                          <h5>Fun Fact this WebApp is also a Hosted in Azure App Service Integrated CI/CD via Github</h5>
+                      </p>
+                </p>
+
+                <a href="https://azure.microsoft.com/en-in/services/app-service/" class="btn btn-primary" target="_blank">Know More</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+
+    <div class="col-md-6 py-4">
+        <div class="card  ">
+            <!-- <h4 class="card-header border">Jinja</h4> -->
+            <div class="bg-image text-center">
+                <img src="https://jinja.palletsprojects.com/en/3.0.x/_images/jinja-logo.png" class="img-fluid img-card" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Jinja the Template Engine</h5>
+
+                <p class="card-text border-top border-bottom">
+                    <ul>
+                      <h5>It is web template engine for the Python programming language</h5>
+                      <ul>
+                          <li>Fast</li>
+                          <li>Extensible</li>
+                          <li>Expressive</li>
+                          <li>Template allow writing code similar to Python syntax</li>
+                      </ul>
+                      <p >
+                          <h5>Fun Fact this WebApp uses Jinja Templates</h5>
+                      </p>
+                </p>
+
+                <a href="https://palletsprojects.com/p/jinja/" class="btn btn-primary" target="_blank">Know More</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-6 py-4">
+        <div class="card  ">
+            <!-- <h4 class="card-header border">html</h4> -->
+            <div class="bg-image ">
+                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--GKi4_vDA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/spi23hc9kkmero545sgz.png" class="img-fluid " />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Fontend - HTML, CSS, JS</h5>
+
+                <p class="card-text border-top">
+                    <ul>
+                        <li>HTML for</li>
+                        The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser.
+                        <br>
+                        <a href="hhttps://www.w3schools.com/css/default.asp" class="btn btn-primary" target="_blank">Know More</a>
+                        <li>CSS</li>
+                        Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+                        <br>
+                        <a href="https://www.w3schools.com/css/default.asp" class="btn btn-primary" target="_blank">Know More</a>
+                        <li>JavaScript</li>
+                        JavaScript is the world's most popular programming language. JavaScript is the programming language of the Web.
+                        <br>
+                        <a href="https://www.w3schools.com/js/default.asp" class="btn btn-primary" target="_blank">Know More</a>
+                      </ul>
+                      <p class="border-top">
+                          <h5>Fun Fact this WebApp is uses HTML, CSS to make Jinja Templates</h5>
+                      </p>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
