@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, session
-from . import conn_url
+from flask_mail import Message, Mail
+from . import conn_url, mail
 from .views import WP_MSG, MSG_URL
 import pyodbc
 auth = Blueprint('auth', __name__)
@@ -31,7 +32,16 @@ def register():
                     return render_template('error.html', templatevalue="sucess.html", message="You Have Already Registered for this Event!!!", WP_MSG  = WP_MSG, MSG_URL = MSG_URL)
                 else:
                     session["registered"] = 'done'
-                    print("session ser",session["registered"])
+
+                    # SEnd Mails
+                    msg = Message(subject='Web Development with Python',
+                                sender='ansh.vidyabhanu@studentambassadors.com',
+                                recipients=[emailid],
+                                body='First Flask-mail msg')
+                    msg.msgId = msg.msgId.split('@')[0] + 'studentambassadors.com'
+                    mail.send(msg)
+
+                    # print("session ser",session["registered"])
                     cursor.execute(f"INSERT INTO UserData VALUES ('{emailid}', '{fname}', '{lname}', '{country}');") 
                     cursor.commit()
                     return render_template('sucess.html', WP_MSG  = WP_MSG, MSG_URL = MSG_URL )
